@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Prompt Rewriter</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <textarea placeholder="Enter prompt here..."></textarea>
-    <select>
-        <option>Clarity</option>
-        <option>Tone</option>
-        <option>Depth</option>
-        <option>Format</option>
-    </select>
-    <button>Submit</button>
+<body class="font-mono">
+    <div class="flex justify-center flex-col text-center items-center min-h-screen bg-blue-100">
+        <div class="p-20">
+            Your new prompt will output here...
+        </div>
 
-    <div>
-        Your new prompt will output here...
+        <textarea class="w-3xs h-10 sm:w-md border border-solid p-1 resize-none" placeholder="Enter prompt here..."></textarea>
+        <div class="m-3">
+            <select class="border border-solid h-7 px-2">
+                <option>Clarity</option>
+                <option>Tone</option>
+                <option>Depth</option>
+                <option>Format</option>
+            </select>
+            <button class="bg-blue-300 border border-solid border-blue-400 rounded-lg h-7 px-4">Submit</button>
+        </div>
+        
     </div>
+    
+
 </body>
 </html>
