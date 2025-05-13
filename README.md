@@ -22,3 +22,6 @@ A small project that rewrites the user's prompt based on their chosen goal (clar
 To run locally:
 1. Clone the repository
 2. Open the html file in your local browser
+
+---
+![ai-prompt-rewriter mov](https://github.com/user-attachments/assets/be97e484-2703-4fa0-8d5e-2f0ad23e2774)
