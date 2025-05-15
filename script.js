@@ -1,16 +1,20 @@
 
-function getUserInput() {
+async function getUserInput() {
     var userPrompt = document.getElementById("user-prompt").value;
     var userGoal = document.getElementById("user-goal").value;
-    var newPrompt = document.getElementById("rewritten-prompt").value;
+    var newPrompt = document.getElementById("rewritten-prompt");
+
+    newPrompt.style.display = "none";
+    document.getElementById("loading").style.display = "block";
 
     callGPT(userPrompt, userGoal).then((rewritten) => {
-        document.getElementById("rewritten-prompt").innerHTML = rewritten;
+        document.getElementById("loading").style.display = "none";
+        newPrompt.style.display = "block";
+        newPrompt.innerHTML = rewritten;
     });
 }
 
 async function callGPT(userPrompt, userGoal) {
-  console.log("test");
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
